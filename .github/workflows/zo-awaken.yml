@@ -43,13 +43,6 @@ jobs:
             google-chrome-stable \
             xvfb \
 
-      - name: 🛡️ 下载 uBlock Origin
-        run: |
-          VERSION=$(curl -s https://api.github.com/repos/gorhill/uBlock/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
-          echo "📦 uBlock 版本: $VERSION"
-          wget -q "https://github.com/gorhill/uBlock/releases/download/${VERSION}/uBlock0_${VERSION}.chromium.zip"
-          unzip -q "uBlock0_${VERSION}.chromium.zip" -d ubol
-
       - name: 🐍 安装 Python 依赖
         run: |
           pip install seleniumbase
