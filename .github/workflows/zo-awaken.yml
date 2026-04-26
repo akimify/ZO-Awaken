@@ -1,8 +1,7 @@
 name: Zo-Awaken
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 1 * * *'
+
 jobs:
   run_zo_awaken:
     runs-on: ubuntu-latest
